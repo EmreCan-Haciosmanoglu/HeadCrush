@@ -301,7 +301,7 @@ public class Level extends JFrame {
 	}
 
 	public static void CreateGame(int lvl) {
-		if(game == null && NewGame?);
+		if(game == null);
 			game = new Container();
 			
 		Form.setContentPane(game);
