@@ -48,12 +48,7 @@ public class Level extends JFrame {
 		CreateGamesInfos();
 		// CreateLevels();
 		// CreateEND();
-		try {
-			imgPause = ImageIO.read(new File("PuD.png"));
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		imgPause = Helper.readpng("PuD.png");
 	}
 
 	static void createTC(int LM) {
@@ -381,12 +376,7 @@ public class Level extends JFrame {
 		Form.add(Form.gameName);
 
 		// BackGround
-		BufferedImage background = null;
-		try {
-			background = ImageIO.read(new File("Background.png"));
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		BufferedImage background = Helper.readpng("Background.png");
 		ImageIcon iconbackground = new ImageIcon(background);
 		JLabel LBackground = new JLabel(iconbackground);
 		LBackground.setBounds(0, 0, GameProbs.w - 10, GameProbs.h - 32);

@@ -16,7 +16,7 @@ public class Helper {
 
 		BufferedImage img = null;
 		try {
-			img = ImageIO.read(new File(path));
+			img = ImageIO.read(new File("Images/" + path));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -25,5 +25,16 @@ public class Helper {
 		Image dimg = img.getScaledInstance(w, h, Image.SCALE_SMOOTH);
 		return new ImageIcon(dimg);
 		
+	}
+	static BufferedImage readpng(String path)
+	{
+		BufferedImage result = null;
+		try {
+			result = ImageIO.read(new File("Images/" + path));
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return result;
 	}
 }
